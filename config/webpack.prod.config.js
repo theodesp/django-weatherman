@@ -10,6 +10,7 @@ module.exports = {
     vendors: [
       "react",
       "react-dom",
+      "react-bootstrap",
       "babel-polyfill",
     ],
     app: ["./src/index.tsx"]

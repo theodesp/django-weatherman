@@ -36,5 +36,3 @@ $ gunicorn -b :80 weatherman.wsgi --log-file -
 ```
 
 Your app should now be running on [example.com](http://example.com).
-
-## About the Application

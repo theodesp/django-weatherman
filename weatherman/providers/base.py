@@ -11,6 +11,10 @@ class BaseWeather(object):
         secret_key = utils.get_setting(self.SETTING_KEY)
         params = {'q': city, 'appid': secret_key}
 
+        if (self.EXTRA_PARAMS):
+            params.update(self.EXTRA_PARAMS)
+        
+
         return self.get_json(self.URL, params=params, **kwargs)
         
     def request(self, url, params, method='GET', **kwargs):

@@ -3,6 +3,7 @@ import * as React from "react";
 import { render } from "react-dom";
 // Import the Hot Module Reloading App Container – more on why we use "require" below
 const { AppContainer } = require("react-hot-loader");
+import API from "services/api";
 
 // Import our App container (which we will create in a second)
 import App from "./containers/app";
@@ -17,7 +18,7 @@ const rootEl = document.getElementById("app");
 // And render our App into it, inside the HMR App Container which handles the reloading
 render(
   <AppContainer>
-    <App />
+    <App api={API} />
   </AppContainer>,
   rootEl
 );

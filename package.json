@@ -42,6 +42,7 @@
     "@types/react-dom": "^0.14.16",
     "@types/requirejs": "^2.1.26",
     "@types/sinon": "^1.16.29",
+    "@types/whatwg-fetch": "0.0.31",
     "babel-cli": "6.14.0",
     "babel-core": "6.14.0",
     "babel-loader": "6.2.5",
@@ -67,14 +68,16 @@
     "tslint": "^3.15.1",
     "typescript": "^2.0.2",
     "webpack": "1.13.2",
+    "webpack-bundle-tracker": "0.0.93",
     "webpack-dev-server": "1.15.0",
-    "webpack-notifier": "1.4.1",
-    "webpack-bundle-tracker": "0.0.93"
+    "webpack-notifier": "1.4.1"
   },
   "dependencies": {
-    "react": "15.3.1",
-    "react-dom": "15.3.1",
-    "react-addons-shallow-compare": "15.3.1",
-    "react-geosuggest": "^1.25.1"
+    "react": "15.3.2",
+    "react-addons-shallow-compare": "15.3.2",
+    "react-bootstrap": "^0.30.3",
+    "react-dom": "15.3.2",
+    "react-geosuggest": "^1.25.1",
+    "whatwg-fetch": "1.0.0"
   }
 }

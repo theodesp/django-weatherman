@@ -8,3 +8,4 @@ class OpenWeather(BaseWeather):
     name = 'openweathermap'  # provider name
     URL = 'http://api.openweathermap.org/data/2.5/forecast/city'
     SETTING_KEY= 'OPEN_WEATHER_KEY'
+    EXTRA_PARAMS = {'units': 'metric'}
