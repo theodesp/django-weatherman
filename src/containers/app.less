@@ -1,0 +1,63 @@
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 0 0 auto;
+    max-width: 768px;
+    max-width: 34rem;
+
+    h1 {
+        font-size: 4rem;
+        font-weight: 500;
+        margin-bottom: .5em;
+        color: #267dc0;
+    }
+
+    .subheader {
+        font-weight: 300;
+        margin-bottom: 1.5em;
+    }
+
+    .geosuggest {
+        font-size: 1rem;
+        position: relative;
+        width: 50%;
+        margin: 1em auto;
+        text-align: left;
+    }
+
+    .geosuggest__input {
+        height: 20px;
+        width: 150px;
+        padding: 10px 0;
+        border-radius: 5px;
+        font-size: 18px;
+        text-align: center;
+        width: 100%;
+        border: 2px solid transparent;
+    }
+
+    .geosuggest__suggests {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        max-height: 25em;
+        padding: 0;
+        margin-top: -1px;
+        border: 1px dashed #267dc0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        list-style: none;
+        z-index: 5;
+    }
+
+    .geosuggest-item {
+        cursor: pointer;
+
+        &:hover {
+            background-color: aliceblue;
+        }
+    }
+}

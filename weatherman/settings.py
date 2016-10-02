@@ -23,8 +23,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY') or '123reg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'TRUE') == 'TRUE'
-
+DEBUG = os.environ.get('DEBUG', 'TRUE') == 'TRUE' or False
 
 # Allow all host headers
 ALLOWED_HOSTS = ['*']
@@ -125,20 +124,31 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'assets'), # We do this so that django's collectstatic copies or our bundles to the STATIC_ROOT or syncs them to whatever storage we use.
+    os.path.join(BASE_DIR, 'build'), # We do this so that django's collectstatic copies or our bundles to the STATIC_ROOT or syncs them to whatever storage we use.
+    os.path.join(BASE_DIR, 'dist'),
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 WEBPACK_LOADER = {
     'DEFAULT': {
-        'BUNDLE_DIR_NAME': 'bundles/',
+        'BUNDLE_DIR_NAME': 'build/',
         'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
     }
 }
 
+if not DEBUG:
+    WEBPACK_LOADER['DEFAULT'].update({
+        'BUNDLE_DIR_NAME': 'dist/',
+        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats-prod.json'),
+    })
+
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
+# Weather class to instansiate
+WEATHER_PROVIDER = 'weatherman.providers.openweather.OpenWeather'
 
+# Open weather API secret Key
+OPEN_WEATHER_KEY = "b1eecda7400f96c05116e25f336946ba"
 
