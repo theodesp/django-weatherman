@@ -1,0 +1,4 @@
+django==1.10
+django-webpack-loader==0.3.3
+djangorestframework==3.4.7
+wheel==0.29.0

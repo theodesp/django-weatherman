@@ -1,0 +1,39 @@
+{
+  "name": "django-weatherman",
+  "version": "1.0.0",
+  "description": "Django + React web app to serve weather info on demand",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --progress --colors --config webpack.config.js",
+    "watch": "webpack --progress --colors --config webpack.config.js --watch",
+    "postinstall": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theodesp/django-weatherman.git"
+  },
+  "keywords": [
+    "React",
+    "Django",
+    "REST",
+    "weather",
+    "charts"
+  ],
+  "author": "Theo Despoudis thdespou@hotmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theodesp/django-weatherman/issues"
+  },
+  "homepage": "https://github.com/theodesp/django-weatherman#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "webpack": "^1.13.2",
+    "webpack-bundle-tracker": "0.0.93"
+  }
+}

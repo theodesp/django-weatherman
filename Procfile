@@ -1,0 +1,1 @@
+web: gunicorn weatherman.wsgi --log-file -
