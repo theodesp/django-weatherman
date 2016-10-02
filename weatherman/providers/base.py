@@ -1,4 +1,5 @@
 from requests import request, ConnectionError
+from weatherman exceptions import ApiCallFailed
 from weatherman import utils
 
 class BaseWeather(object):
@@ -21,7 +22,7 @@ class BaseWeather(object):
         try:
             response = request(method, url, params=params)
         except ConnectionError as err:
-            raise AuthFailed(self, str(err))
+            raise ApiCallFailed(self, str(err))
         response.raise_for_status()
         return response
 
