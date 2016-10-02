@@ -28,7 +28,7 @@
     "url": "https://github.com/theodesp/django-weatherman/issues"
   },
   "homepage": "https://github.com/theodesp/django-weatherman#readme",
-  "dependencies": {
+  "devDependencies": {
     "babel": "^6.5.2",
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",

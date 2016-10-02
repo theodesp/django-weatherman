@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'webpack_loader',
+    'api'
 ]
 
 MIDDLEWARE = [
@@ -126,6 +128,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'assets'), # We do this so that django's collectstatic copies or our bundles to the STATIC_ROOT or syncs them to whatever storage we use.
 )
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 WEBPACK_LOADER = {
     'DEFAULT': {
         'BUNDLE_DIR_NAME': 'bundles/',
@@ -135,5 +139,6 @@ WEBPACK_LOADER = {
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 
 
